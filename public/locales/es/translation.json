@@ -1,8 +1,19 @@
 {
-    "title": "Bienvenido a react usando react-i18next",
-    "description": {
-      "part1": "Para empezar, edita <1>src/App.js</1> despues guarda y recarga",
-      "part2": "Cambia el lenguague entre ingles y español usando los botones"
-    },
-    "how": "Como estas?"
-  }
+  "title": "Welcome to react using react-i18next",
+  "home": "Inicio",
+  "language": {
+    "english": "Ingles",
+    "spanish": "Español"
+  },
+  "mainText": {
+    "card1": "Soporte Telefonico",
+    "card2": "Soporte por Email",
+    "card3": "Nuestra tienda"
+  },
+  "secondaryText": {
+    "card1": "Llamanos al 01234456778",
+    "card2": "Mandanos un email a sss@storyblok.com ",
+    "card3": "Nos encuentras en Street 3, London "
+  },
+  "footer": "Hecho con amor♥"
+}

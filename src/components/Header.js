@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import logo from "../assets/pull-and-bear-logo.png";
 import Switcher from "./Switcher";
+import { useTranslation } from "react-i18next";
 
 const HeaderFrame = styled.nav`
   width: 100%;
@@ -9,7 +10,14 @@ const HeaderFrame = styled.nav`
   display: flex;
   justify-content: space-between;
   /* background: aliceblue; */
-
+  @media only screen and (max-width: 375px) {
+    .logo {
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
   .links {
     /* width: 15%; */
     height: 100%;
@@ -42,10 +50,11 @@ const HeaderFrame = styled.nav`
 `;
 
 const Header = () => {
+  const { t } = useTranslation();
   return (
     <HeaderFrame>
       <div className="links">
-        <a href="#!">Home</a>
+        <a href="#!">{t('home')}</a>
         <a href="#!">Blog</a>
       </div>
       <div className="logo">

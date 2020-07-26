@@ -6,6 +6,11 @@ const ButtonFrame = styled.div`
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  @media only screen and (max-width: 375px) {
+    button {
+      padding: 0;
+    }
+  }
   button {
     background-color: transparent;
     color: #000;
@@ -26,7 +31,7 @@ const ButtonFrame = styled.div`
 `;
 
 const Switcher = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -34,8 +39,8 @@ const Switcher = () => {
   return (
     <>
       <ButtonFrame>
-        <button onClick={() => changeLanguage("en")}>English</button>
-        <button onClick={() => changeLanguage("es")}>Español</button>
+        <button onClick={() => changeLanguage("en")}>{t('language.english')}</button>
+        <button onClick={() => changeLanguage("es")}>{t('language.spanish')}</button>
       </ButtonFrame>
     </>
   );

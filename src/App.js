@@ -9,11 +9,12 @@ const MainContainer = styled.div`
   font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   @media only screen and (min-width: 1024px) {
+    box-sizing: border-box;
     width: 70vw;
     height: 100vh;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto minmax(500px, 1fr) auto;
     /* background: aliceblue; */
   }
 `;

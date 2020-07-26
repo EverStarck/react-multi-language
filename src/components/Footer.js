@@ -1,26 +1,21 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { useTranslation } from "react-i18next";
 
 const FooterFrame = styled.footer`
   width: 100%;
   height: 8vh;
-  background: aliceblue;
-
-    .links {
-        width: 10%;
-        height: 100%;
-        background: green;
-    }
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: aliceblue; */
 `;
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <FooterFrame>
-      <div className="links">
-        <a href="#!">Home</a>
-        <a href="#!">Blog</a>
-      </div>
+      <p>{t('footer')}</p>
     </FooterFrame>
   );
 };
