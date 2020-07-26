@@ -3,7 +3,6 @@ import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
-const Languages = ['en','es'];
 
 i18n
   // load translation using http -> see /public/locales
@@ -19,7 +18,6 @@ i18n
   .init({
     fallbackLng: 'en',
     debug: true,
-    whitelist: Languages,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
