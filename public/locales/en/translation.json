@@ -11,10 +11,10 @@
       "card3": "Our store"
     },
     "secondaryText": {
-      "card1": "Call us at 01234456778",
-      "card2": "Email us at sss@storyblok.com ",
-      "card3": "Get in touch at Street 3, London "
+      "card1": "Call us at 1234567890",
+      "card2": "Email us at example@mail.com",
+      "card3": "Get in touch at Street, Mexico"
     },
-    "footer": "Made with love♥"
-
+    "footer": "Made with love♥",
+    "blog": "Welcome to our Blog!"
   }

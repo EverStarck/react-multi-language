@@ -10,9 +10,8 @@ import PostDetail from "./pages/PostDetail";
 const MainContainer = styled.div`
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
+  box-sizing: border-box;
   @media only screen and (min-width: 1024px) {
-    box-sizing: border-box;
     width: 70vw;
     height: 100vh;
     margin: 0 auto;

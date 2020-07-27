@@ -1,9 +1,32 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import postsManager from "../post/postsManager.json";
 
+const BlogFrame = styled.main`
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .posts-frame {
+    padding: 0 40px 10px 30px;
+    @media only screen and (min-width: 1024px) {
+      padding: 0;
+      margin-bottom: 40px;
+    }
+    h3 {
+      margin-bottom: 5px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+`;
+
 const Blog = () => {
+  const { t } = useTranslation();
+
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -12,18 +35,18 @@ const Blog = () => {
   }, []);
 
   return (
-    <>
-      <h1>Blog</h1>
+    <BlogFrame>
+      <h1>{t("blog")}</h1>
       {posts.map((post) => (
-        <div key={post.id}>
-        <Link to={`/post/${post.slug}`}>
-        <h3>{post.blogTitle}</h3>
-        </Link>
-        <p>{post.postedOn}</p>
-        <p>{post.blogTextMin}</p>
-        </div >
+        <div className="posts-frame" key={post.id}>
+          <Link to={`/post/${post.slug}`}>
+            <h3>{post.blogTitle}</h3>
+          </Link>
+          <small>{post.postedOn}</small>
+          <p>{post.blogTextMin}</p>
+        </div>
       ))}
-    </>
+    </BlogFrame>
   );
 };
 

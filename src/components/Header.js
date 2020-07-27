@@ -11,7 +11,7 @@ const HeaderFrame = styled.nav`
   display: flex;
   justify-content: space-between;
   /* background: aliceblue; */
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 390px) {
     .logo {
       img {
         width: 80%;

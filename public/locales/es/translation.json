@@ -11,9 +11,10 @@
     "card3": "Nuestra tienda"
   },
   "secondaryText": {
-    "card1": "Llamanos al 01234456778",
-    "card2": "Mandanos un email a sss@storyblok.com ",
-    "card3": "Nos encuentras en Street 3, London "
+    "card1": "Llamanos al 1234567890",
+    "card2": "Mandanos un email a example@mail.com",
+    "card3": "Nos encuentras en Calle, Mexico"
   },
-  "footer": "Hecho con amor♥"
+  "footer": "Hecho con amor♥",
+  "blog": "Bienvenido a nuestro Blog!"
 }
