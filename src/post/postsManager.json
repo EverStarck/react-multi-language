@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "blogCategory": "New",
+      "blogTitle": "The most important thing in your life!",
+      "slug": "most-important-thing-in-your-life",
+      "postedOn": "July 27, 2020",
+      "author": "EverStarck",
+      "blogTextMin": "The most important thing in your life is...",
+      "blogText": "The most important thing in your life is. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laudantium!"
+    },
+    {
+      "id": 2,
+      "blogCategory": "Hardware",
+      "blogTitle": "The BEST keyboard for your PC",
+      "slug": "best-keyboard-for-your-pc",
+      "postedOn": "July 27, 2020",
+      "author": "EverStarck",
+      "blogTextMin": "The BEST keyboard for your PC is...",
+      "blogText": "The BEST keyboard for your PC is. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laudantium!"
+    },
+    {
+      "id": 3,
+      "blogCategory": "Gaming",
+      "blogTitle": "Lo mejor del gaming en el 2020!",
+      "slug": "lo-mejor-del-gaming-2020",
+      "postedOn": "July 27, 2020",
+      "author": "EverStarck",
+      "blogTextMin": "Lo mejor del gaming en el 2020 es...",
+      "blogText": "Lo mejor del gaming en el 2020. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laudantium!"
+    }
+  ]
+}

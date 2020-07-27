@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Blog from "./pages/Blog";
+import PostDetail from "./pages/PostDetail";
 
 const MainContainer = styled.div`
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -29,6 +30,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/blog" component={Blog} />
+          <Route path="/post/:slug" component={PostDetail} />
         </Switch>
         {/* <Main /> */}
         <Footer />
