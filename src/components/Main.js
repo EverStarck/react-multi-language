@@ -67,10 +67,6 @@ const Main = () => {
           secondaryText={t('secondaryText.card3')}
         />
       </div>
-      {/* <h1>{t("title")}</h1>
-      <h4>{t("description.part1")}</h4>
-      <h4>{t("description.part2")}</h4>
-      <p>{t("how")}</p> */}
     </MainFrame>
   );
 };

@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import logo from "../assets/pull-and-bear-logo.png";
 import Switcher from "./Switcher";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const HeaderFrame = styled.nav`
   width: 100%;
@@ -25,12 +26,13 @@ const HeaderFrame = styled.nav`
     flex-direction: row;
     align-items: center;
     /* background: coral; */
-    a {
+    p {
       line-height: 1.5;
       color: #000;
       margin-right: 10px;
       text-decoration: none;
       border-bottom: 2px solid transparent;
+      cursor: pointer;
       &:hover {
         border-bottom: 2px solid #000;
       }
@@ -51,11 +53,20 @@ const HeaderFrame = styled.nav`
 
 const Header = () => {
   const { t } = useTranslation();
+
+  const NoDecoration = {
+    textDecoration: 'none'
+  };
+
   return (
     <HeaderFrame>
       <div className="links">
-        <a href="#!">{t('home')}</a>
-        <a href="#!">Blog</a>
+        <Link style={{textDecoration: 'none'}} to="/">
+          <p>{t("home")}</p>
+        </Link>
+        <Link style={NoDecoration} to="/blog">
+          <p>Blog</p>
+        </Link>
       </div>
       <div className="logo">
         <img src={logo} width="150px" height="70px" alt="" />
