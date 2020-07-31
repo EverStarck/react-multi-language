@@ -9,18 +9,24 @@ const CardFrame = styled.div`
   height: 50%;
   /* border: 1px solid red; */
   /* background: lightpink; */
+  animation: .8s ${(props) => props.animationEffect};
   @media only screen and (max-width: 375px) {
     font-size: 14px;
     padding: 10px;
   }
 `;
 
-const Card = (props) => {
+const Card = ({ img, mainText, secondaryText, animationEffect }) => {
   return (
-    <CardFrame>
-      <img src={props.img} alt="" />
-      <h1>{props.mainText}</h1>
-      <div>{props.secondaryText}</div>
+    <CardFrame
+      img={img}
+      mainText={mainText}
+      secondaryText={secondaryText}
+      animationEffect={animationEffect}
+    >
+      <img src={img} alt="" />
+      <h1>{mainText}</h1>
+      <div>{secondaryText}</div>
     </CardFrame>
   );
 };
