@@ -3,9 +3,13 @@ import styled from "@emotion/styled";
 import postsManager from "../post/postsManager.json";
 import BackButton from "../components/BackButton";
 
+// Animations
+import {fadeInAnimation} from '../components/Animations';
+
 const PostFrame = styled.main`
   margin: 50px 0 0 0;
   padding: 0 40px 10px 30px;
+  animation: 1s ${fadeInAnimation};
   @media only screen and (min-width: 1024px) {
     padding: 0;
     margin-bottom: 40px;

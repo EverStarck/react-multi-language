@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/core";
 import { useTranslation } from "react-i18next";
 
 import fashionSmall from "../assets/fashion-small.jpg";
@@ -9,6 +10,17 @@ import Card from "./Card";
 import cellphone from "../assets/cellphone.jpg";
 import email from "../assets/email.jpg";
 import location from "../assets/location.jpg";
+
+// Animations
+import { pulse } from "react-animations";
+import { zoomInLeft } from "react-animations";
+import { zoomInUp } from "react-animations";
+import { zoomInRight } from "react-animations";
+
+const pulseAnimation = keyframes`${pulse}`;
+const zoomInLeftAnimation = keyframes`${zoomInLeft}`;
+const zoomInUpAnimation = keyframes`${zoomInUp}`;
+const zoomInRightAnimation = keyframes`${zoomInRight}`;
 
 const MainFrame = styled.main`
   box-sizing: border-box;
@@ -25,6 +37,7 @@ const MainFrame = styled.main`
   .img {
     width: 100%;
     height: 50%;
+    animation: 1s ${pulseAnimation};
     /* background: red; */
   }
   .info {
@@ -53,18 +66,21 @@ const Main = () => {
       <div className="info">
         <Card
           img={cellphone}
-          mainText={t('mainText.card1')}
-          secondaryText={t('secondaryText.card1')}
+          mainText={t("mainText.card1")}
+          secondaryText={t("secondaryText.card1")}
+          animationEffect={zoomInLeftAnimation}
         />
         <Card
           img={email}
-          mainText={t('mainText.card2')}
-          secondaryText={t('secondaryText.card2')}
+          mainText={t("mainText.card2")}
+          secondaryText={t("secondaryText.card2")}
+          animationEffect={zoomInUpAnimation}
         />
         <Card
           img={location}
-          mainText={t('mainText.card3')}
-          secondaryText={t('secondaryText.card3')}
+          mainText={t("mainText.card3")}
+          secondaryText={t("secondaryText.card3")}
+          animationEffect={zoomInRightAnimation}
         />
       </div>
     </MainFrame>
